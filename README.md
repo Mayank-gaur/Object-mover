@@ -64,7 +64,16 @@ https://github.com/facebookresearch/segment-anything#installation
 
 - * download all dependencies specified in environment.yml
 conda env export > environment.yml
-  
 
+## Usage
+- * python get_masks.py --image_path <image path> --text_prompt <text_prompt> --op_path <op_path>
+- This script takes the input scene and the text prompt
+from the command line argument and outputs an image with a red mask on all pixels where
+the object (denoted in the text prompt) was present.
+
+ - * python translate_obj.py --image_path <image path> --text_prompt <text_prompt> --x <x> --y <y> --op_path <op_path>
+ -This script changes the position of the segmented object using user prompts
+specifying the number of pixels to shift in x (+x being the horizontal right direction) and y (+y
+being the vertical up direction) directions.
 
 
