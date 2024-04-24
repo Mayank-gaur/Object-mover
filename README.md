@@ -76,6 +76,9 @@ the object (denoted in the text prompt) was present.
 specifying the number of pixels to shift in x (+x being the horizontal right direction) and y (+y
 being the vertical up direction) directions.
 
+## Improvements
+- *Enhanced Blending Algorithm: We can implement a more sophisticated blending algorithm to seamlessly integrate the shifted object back into the original scene. One approach is to blur the mask along its edges and utilize alpha blending techniques to merge it with the background. Additionally, employing Poisson blending could further refine the blending process, resulting in smoother transitions between the object and its surroundings.
+-  *Stable Diffusion Inpainting: After experimentation, it has been observed that stable diffusion inpainting yields optimal results on image resolutions of 256x256, 512x512, and 1024x1024. This preference stems from the continuous cascading training conducted on these specific resolution bins. To leverage this, I propose a multi-step approach. Firstly, we should select a crop from the image that captures sufficient background details for inpainting. Next, this crop should be resized to one of the aforementioned dimensions for inpainting. Once the patch has been inpainted, it should be upsampled to match the original patch resolution in the image. Finally, the inpainted patch can be seamlessly blended back into the original scene using the techniques mentioned in the first point. This comprehensive process aims to address any edge issues present in the current solution, resulting in a more polished final output.
 ## Results 
 
 ![bagpack](https://github.com/Mayank-gaur/Object-mover/assets/56195849/aa4c5753-32a1-4f49-a711-a6f4370ee4ad)
