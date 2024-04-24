@@ -67,7 +67,7 @@ conda env export > environment.yml
 
 ## Usage
 - * python get_masks.py --image_path <image path> --text_prompt <text_prompt> --op_path <op_path>
-- This script takes the input scene and the text prompt
+  This script takes the input scene and the text prompt
 from the command line argument and outputs an image with a red mask on all pixels where
 the object (denoted in the text prompt) was present.
 
@@ -75,5 +75,12 @@ the object (denoted in the text prompt) was present.
  -This script changes the position of the segmented object using user prompts
 specifying the number of pixels to shift in x (+x being the horizontal right direction) and y (+y
 being the vertical up direction) directions.
+
+## Results 
+
+![bagpack](https://github.com/Mayank-gaur/Object-mover/assets/56195849/aa4c5753-32a1-4f49-a711-a6f4370ee4ad)
+![wall_hanging](https://github.com/Mayank-gaur/Object-mover/assets/56195849/5df0b435-1ed4-4ed7-8eee-c0289f929a9f)
+![stool](https://github.com/Mayank-gaur/Object-mover/assets/56195849/58192b18-9f59-4b36-acfa-9d81b28c0e3a)
+
 
 
