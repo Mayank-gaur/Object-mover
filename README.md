@@ -1,3 +1,4 @@
+## Documentation
 This documentation outlines the structure and functioning of this project, designed for advanced image processing tasks using various machine learning models and libraries. The script combines object detection, segmentation, and inpainting capabilities to manipulate and enhance images according to specific user inputs.
 
 ### Script Overview
@@ -50,3 +51,20 @@ The script starts by importing necessary Python libraries and modules:
 ### Summary
 
 The script effectively combines multiple advanced image processing techniques to manipulate images based on textual descriptions. It leverages deep learning models for object detection, segmentation, and inpainting, making it a powerful tool for image editing tasks. Each step is carefully designed to maintain the integrity and quality of the image, while dynamically adapting to user inputs.
+
+## Installation
+- * create new env:
+ conda create -n move.
+
+- * Setup DINO: Follow the steps here to install DINO:
+https://github.com/IDEA-Research/DINO#installation
+
+- *Setup SAM:Follow the steps here to install SAM:
+https://github.com/facebookresearch/segment-anything#installation
+
+- * download all dependencies specified in environment.yml
+conda env export > environment.yml
+  
+
+
+
